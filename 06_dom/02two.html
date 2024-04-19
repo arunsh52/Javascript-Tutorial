@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body style="background-color: #272727; color: #fff;">
+    <div class="parent" >
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thrusday</div>
+
+    </div>
+</body>
+<script>
+    const days = document.querySelector('.parent');
+    // console.log(days.children[1].innerHTML)
+    for (let index = 0; index < days.children.length; index++) {
+        console.log(days.children[index].innerHTML)
+        console.log(days.children[index].style.color="red");
+        
+    }
+    const child = document.querySelector('.day');
+    console.log(child.parentElement);  // Check difference between parentElement and parentNode
+    console.log(child.parentNode)
+    console.log(child.nextElementSibling)
+    console.log(days.childNodes); // This will give you all the nodes 
+    
+</script>
+</html>
