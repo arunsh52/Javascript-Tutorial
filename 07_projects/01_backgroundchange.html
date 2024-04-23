@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change your Background</title>
+    <style>
+        html {
+            margin: 0;
+            }
+
+        span {
+            display: block;
+            }
+        .canvas {
+            margin: 100px auto 100px;
+            width: 80%;
+            text-align: center;
+        }
+
+        .button {
+            width: 100px;
+            height: 100px;
+            border: solid black 2px;
+            display: inline-block;
+        }
+
+        #grey {
+            background: grey;
+        }
+
+        #white {
+            background: white;
+        }
+        #blue {
+            background: blue;
+        }
+        #yellow {
+            background: yellow;
+        }
+        #green{
+            background: green;
+        }
+        #red{
+            background: red;
+        }
+    </style>
+</head>
+<body >
+    <div class="canvas">
+        <h1>Change Your Background</h1>
+        <span class="button" id="grey"></span>
+        <span class="button" id="white"></span>
+        <span class="button" id="blue"></span>
+        <span class="button" id="yellow"></span>
+        <span class="button" id="green"></span>
+        <span class="button" id="red"></span>
+    </div>
+</body>
+<script>
+    const button = document.querySelectorAll('.button')
+    // console.log(button)
+    const body = document.querySelector('body');
+    // console.log(body)
+    button.forEach((button)=>{
+        // console.log(button)
+        button.addEventListener('click', (e)=>{
+            console.log(e);
+            console.log(e.target)
+            // if(e.target.id == 'grey'){
+            //     body.style.backgroundColor = "grey";
+            // }
+            // else if(e.target.id == 'white'){
+                // body.style.backgroundColor = "white";
+                // body.style.color = 'black'
+            // }
+            // else if(e.target.id == 'blue'){
+            //     body.style.backgroundColor = "blue";
+            //     body.style.color = 'white';
+            // }
+            // else{
+            //     body.style.backgroundColor = "yellow";
+            // }
+
+            switch (e.target.id) {
+                case 'grey':
+                    body.style.backgroundColor = "grey";
+                    body.style.color = 'black';
+                    break;
+                case 'white':
+                    body.style.backgroundColor = "white";
+                    body.style.color = 'black';
+                    break;
+                case 'blue':
+                    body.style.backgroundColor = "blue";
+                    body.style.color = 'white';
+                    break;
+                case 'yellow':
+                    body.style.backgroundColor = "yellow";
+                    body.style.color = 'black';
+                    break;
+                case 'green':
+                    body.style.backgroundColor = "green";
+                    body.style.color = 'black';
+                    break;
+                case 'red':
+                    body.style.backgroundColor = "red";
+                    body.style.color = 'black';
+                    break;
+                
+            }
+        })
+    })
+</script>
+</html>
