@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04Four.html</title>
+</head>
+<body style="background-color: #272727; color: #fff;">
+    <ul class="javascript">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    const temp = document.querySelector('.javascript');
+    // console.log(temp)
+    const li = document.createElement('li');
+    li.textContent ="React";
+    // console.log(li)
+    temp.appendChild(li)
+
+    // This is by traversing className
+    // const hell = document.getElementsByClassName('javascript')[0];
+    // console.log(hell)
+    // const another_li = document.createElement('li');
+    // another_li.innerText = "Second"
+    // hell.appendChild(another_li)
+
+    function addChild(langName){
+       const li = document.createElement('li');
+       li.innerHTML = `${langName}`;
+       document.querySelector('.javascript').appendChild(li);
+
+    }
+
+    addChild('Typescript')
+
+
+    
+// Replace
+    const element = document.querySelector('li:nth-child(2)')
+    console.log(element);
+    const li_element = document.createElement('li');
+    li_element.innerHTML = "Replaced";
+    element.replaceWith(li_element)
+
+// Remove
+    const remove_elem = document.querySelector('li:last-Child');
+    console.log(remove_elem)
+    remove_elem.remove();
+   
+    
+</script>
+</html>
