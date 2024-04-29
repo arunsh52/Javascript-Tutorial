@@ -25,13 +25,16 @@
 <script>
     const form = document.querySelector('form');
     form.addEventListener('submit',(e)=>{
-        e.preventDefault // This is preventing default action of selector(form)
+        e.preventDefault                                            // This is preventing default action of selector(form)
         let height = parseInt(document.querySelector('#height').value)
         const weight = parseInt(document.querySelector('#weight').value)
 
-        height = height* height;
+        height = Math.pow(height, 2);
 
-        const result = height/weight
+        const result = weight/height * 100; 
+        // document.getElementById("result").innerHTML = result;
+        alert("Your BMI score is  : "+  result)
+        // alert(result)
     })
 </script>
 </html>
